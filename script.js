@@ -16,4 +16,15 @@ function onAddToSubmit(e){
     addItemToStorage(newItem);
 }
 
+
+function addItemToDOM(item){
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(item));
+    listItem.appendChild(li);
+
+    inputField.value = '';
+    inputField.focus();
+}
+
+
 formItem.addEventListener('submit', onAddToSubmit);
